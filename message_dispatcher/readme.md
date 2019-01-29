@@ -3,10 +3,10 @@
 #### class inherit
 '''  
 > virtual basic class: Dispatcher  
->     sub implement class:  DispatcherImpl  
->>         add message handler  
->>             std::map<TmsgId, std::shared_ptr<Handler>> handlers  
->>         dispatch message  
+>:     sub implement class:  DispatcherImpl  
+>:         add message handler  
+>:             std::map<TmsgId, std::shared_ptr<Handler>> handlers  
+>:         dispatch message  
 
 '''
 
