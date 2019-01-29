@@ -2,11 +2,11 @@
 ### 1. createDispatcher
 #### class inherit
 '''  
-virtual basic class: Dispatcher  
->    sub implement class:  DispatcherImpl  
->          add message handler  
->              std::map<TmsgId, std::shared_ptr<Handler>> handlers  
->          dispatch message  
+> virtual basic class: Dispatcher  
+>     sub implement class:  DispatcherImpl  
+>>         add message handler  
+>>             std::map<TmsgId, std::shared_ptr<Handler>> handlers  
+>>         dispatch message  
 
 '''
 
