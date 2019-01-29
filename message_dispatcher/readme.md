@@ -3,17 +3,17 @@
 #### class inherit
 
 > virtual basic class: Dispatcher  
->     sub implement class:  DispatcherImpl  
->         add message handler  
->             std::map<TmsgId, std::shared_ptr<Handler>> handlers  
->         dispatch message  
+>>     sub implement class:  DispatcherImpl  
+>>>         add message handler  
+>>>>             std::map<TmsgId, std::shared_ptr<Handler>> handlers  
+>>>         dispatch message  
 
 
 ### 2. message handler
 
-virtual basic class: Handler  
->    sub implement class: MessageHandler  
->        template message sub class: TypedMessageHandler //adapted many msgtype  
+>virtual basic class: Handler  
+>>    sub implement class: MessageHandler  
+>>>        template message sub class: TypedMessageHandler //adapted many msgtype  
 
 ### 3. message 
 
