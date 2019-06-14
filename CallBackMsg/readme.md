@@ -33,8 +33,8 @@ when changes, notify message canbe wrapped by dispatcher(addReceiver,dispatch) m
 >>>       separated by message type and message struct
 >>>       define the message handler
 >>  5. notifyHandler `SharedDbNotificationHandlerWrapper` wrapper
->>       inherit `ShareDbNotificationHandler`, for `handleTypeMsg` method for message handle
->>       handleTypeMsg call virtual basic method
+>>>       inherit `ShareDbNotificationHandler`, for `handleTypeMsg` method for message handle
+>>>       handleTypeMsg call virtual basic method
 
 > 6. notify callback `NotifyCallback`
      handle method
