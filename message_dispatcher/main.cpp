@@ -3,7 +3,19 @@
 #include "ccinithandler.h"
 #include "authenticationhandler.h"
 
+#include "provisionactdispatcher.h"
+#include "cmactivationreqhandler.h"
+
 using namespace std;
+
+//just for same message with different type (0417)
+std::unique_ptr<ActDispatcher> createProvisionDispatcher()
+{
+    auto proDispatcher = std::make_unique<ActDispatcher>();
+    proDispatcher->addHandler(std::make_unique<CmActivationReqHandler>(), provision::ProvisioningType::Config);
+
+    return proDispatcher;
+}
 
 std::unique_ptr<msg::DispatcherImpl> createDispatcher()
 {
@@ -29,6 +41,8 @@ int main(int argc, char *argv[])
     int msgid = 1;
     dispacher->dispatch(msgid);
     msgid=2;
+    dispacher->dispatch(msgid);
+    msgid=3;
     dispacher->dispatch(msgid);
 
     return 0;
