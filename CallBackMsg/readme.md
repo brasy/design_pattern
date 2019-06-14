@@ -41,8 +41,8 @@ when changes, notify message canbe wrapped by dispatcher(addReceiver,dispatch) m
 
 >>  7. shareDb subscribe instance `SharedSubscribeApiImp`
 >>>         * inherit from virtual basic class `SharedSubscribeApi` for `subscribe` and `handleTypeMsg`
->>>         * `subscriptions` map for saving the pair of queryId/subscribeId and notifyHandler
+>>>         * `subscriptions` map for saving the pair of queryId/subscribeId and notifyHandler `NotifyCallback`
 >>>         * `subscribe` database with queryId/subscribeId
->>>         * `handleTypeMsg` find the notifyHandler by queryId/subscribeId
+>>>         * `handleTypeMsg` find the notifyHandler `NotifyCallback` by queryId/subscribeId
  
  
