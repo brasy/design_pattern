@@ -5,5 +5,5 @@
 
 ## call and dispatch message
 ### * main.cpp
-> Instantiate the runtimeView, and notify message dispatcher
-> dispatch a message \'Notify_MSG\'
+> 1. Instantiate the runtimeView, and notify message dispatcher
+> 2. dispatch a message \'Notify_MSG\'
