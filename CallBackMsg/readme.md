@@ -29,20 +29,20 @@ when changes, notify message canbe wrapped by dispatcher(addReceiver,dispatch) m
 
 > 3. virtual basic class `SharedSubscribeApi`
 >>  4. notifyHandler `ShareDbNotificationHandler`
-       inherit from `TypedMessageHandler` template, for `handleTypeMsg` method for message handle
-	   separated by message type and message struct
-       define the message handler
+>>>       inherit from `TypedMessageHandler` template, for `handleTypeMsg` method for message handle
+>>>       separated by message type and message struct
+>>>       define the message handler
 >>  5. notifyHandler `SharedDbNotificationHandlerWrapper` wrapper
-       inherit `ShareDbNotificationHandler`, for `handleTypeMsg` method for message handle
-       handleTypeMsg call virtual basic method
+>>       inherit `ShareDbNotificationHandler`, for `handleTypeMsg` method for message handle
+>>       handleTypeMsg call virtual basic method
 
 > 6. notify callback `NotifyCallback`
      handle method
 
 >>  7. shareDb subscribe instance `SharedSubscribeApiImp`
->>>          inherit from virtual basic class `SharedSubscribeApi` for `subscribe` and `handleTypeMsg`
->>>          `subscriptions` map for saving the pair of queryId/subscribeId and notifyHandler `NotifyCallback`
->>>          `subscribe` database with queryId/subscribeId
->>>          `handleTypeMsg` find the notifyHandler `NotifyCallback` by queryId/subscribeId
+>>>      inherit from virtual basic class `SharedSubscribeApi` for `subscribe` and `handleTypeMsg`
+>>>      `subscriptions` map for saving the pair of queryId/subscribeId and notifyHandler `NotifyCallback`
+>>>      `subscribe` database with queryId/subscribeId
+>>>      `handleTypeMsg` find the notifyHandler `NotifyCallback` by queryId/subscribeId
  
  
