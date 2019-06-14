@@ -6,11 +6,11 @@ when changes, notify message canbe wrapped by dispatcher(addReceiver,dispatch) m
 ```
 
 ## call and dispatch message
-### main.cpp
+###  main.cpp
   > 1. Instantiate the runtimeView, and notify message dispatcher
   > 2. dispatch a message \'Notify_MSG\'
 
-### RuntimeChangesHandler.cpp/.h
+###  RuntimeChangesHandler.cpp/.h
   > 1. subscribe `queryId/subscribeId contion, lambda callback (functionPoint)`
   > 2. create observer vector to handle the call back
   > 3. callbacks `traverse changes and handle it by observer`
@@ -49,12 +49,12 @@ when changes, notify message canbe wrapped by dispatcher(addReceiver,dispatch) m
   >>>      `handleTypeMsg` find the notifyHandler `NotifyCallback` by queryId/subscribeId
  
  
-### msg/dispatcher.h
-### msg/dispatcherImpl.h
+###  msg/dispatcher.h
+###  msg/dispatcherImpl.h
   >  `addReceiver` and `dispatch` method
   >  `handlers` map save msgId and message handler
 
 
-### msg/msgHandler.h
+###  msg/msgHandler.h
   >  msg handler template class, handle msg by msgid and msgtype
   >  define msg Type
