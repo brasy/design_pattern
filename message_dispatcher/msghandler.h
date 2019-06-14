@@ -12,7 +12,8 @@ enum MSG_TYPE
     NO_MSG=0,
     INIT_REQ,
     AUTHENTICATION_REQ,
-    ACT_MSG
+    ACT_MSG,
+    VAL_MSG
 };
 
 namespace msg {
