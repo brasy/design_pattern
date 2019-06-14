@@ -29,7 +29,7 @@ when changes, notify message canbe wrapped by dispatcher(addReceiver,dispatch) m
 
 > 3. virtual basic class `SharedSubscribeApi`
 >>  4. notifyHandler `ShareDbNotificationHandler`
->>>       inherit from `TypedMessageHandler` template, for `handleTypeMsg` method for message handle
+>>>       inherit from `TypedMessageHandler` template of msg/msghandler method, for `handleTypeMsg` method for message handle
 >>>       separated by message type and message struct
 >>>       define the message handler
 >>  5. notifyHandler `SharedDbNotificationHandlerWrapper` wrapper
@@ -45,4 +45,11 @@ when changes, notify message canbe wrapped by dispatcher(addReceiver,dispatch) m
 >>>      `subscribe` database with queryId/subscribeId
 >>>      `handleTypeMsg` find the notifyHandler `NotifyCallback` by queryId/subscribeId
  
- 
+ * msg/dispatcher.h
+ * msg/dispatcherImpl.h
+>  `addReceiver` and `dispatch` method
+>  `handlers` map save msgId and message handler
+
+ * msg/msgHandler.h
+>  msg handler template class, handle msg by msgid and msgtype
+>  define msg Type
