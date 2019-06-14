@@ -1,0 +1,4 @@
+#ifndef CONFIGSETTER_H
+#define CONFIGSETTER_H
+
+#endif // CONFIGSETTER_H
